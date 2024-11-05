@@ -31,6 +31,8 @@ html {
     font-family: 'Inter', sans-serif;
     background-color: var(--black);
     color: var(--white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -45,6 +47,8 @@ body {
 p, label {
     font-size: var(--font-size-body);
     line-height: 1.5;
+    letter-spacing: -0.03rem;
+    font-weight: 400;
 }
 
 /**
@@ -75,6 +79,10 @@ p, label {
     padding-top: 0;
 }
 
+.form-section__body {
+    font-weight: 500;
+}
+
 .form-section__link {
     color: var(--primary-blue);
 }
@@ -90,6 +98,11 @@ p, label {
     gap: 1rem;
 }
 
+.form-section__form-label {
+    font-size: var(--font-size-small);
+    text-align: center;
+}
+
 .form-section__form-input {
     font-size: var(--font-size-input);
     padding: 1.5rem 2rem;
@@ -98,13 +111,14 @@ p, label {
 }
 
 .form-section__form-result {
+    font-size: var(--font-size-small);
     text-align: center;
     margin-bottom: 1rem;
 }
 
 .form-section__search-icon {
     position: absolute;
-    top: 58%;
+    top: 47%;
     transform: translateY(-50%);
     right: 1.5rem;
 
@@ -121,15 +135,16 @@ p, label {
 .form-section__download-body {
     flex-basis: 50%;
     font-size: var(--font-size-small);
+    line-height: 1.4;
 }
 
 .form-section__download-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 0.5rem;
 
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.5rem 0.75rem 1.2rem;
 
     font-size: var(--font-size-small);
     border: 1px solid var(--primary-blue);
@@ -158,6 +173,7 @@ p, label {
 .footer {
     display: flex;
     flex-direction: column;
+    font-size: var(--font-size-small);
     gap: 1rem;
     padding: 2rem var(--body-padding);
     border-top: 2px solid var(--wp-custom-contrast-50);
@@ -180,7 +196,7 @@ p, label {
     margin: 0;
     padding: var(--body-padding);
     font-weight: 500;
-    font-size: calc( 100vw / 3.5 );
+    font-size: calc( 100vw / 3.25 );
     line-height: 1;
     text-align: center;
     letter-spacing: -0.4rem;
@@ -243,7 +259,7 @@ p, label {
     }
 
     .number-of-sites {
-        margin-top: auto;
+        margin-top: 250px;
     }
 
     .number-of-sites__count {
@@ -265,7 +281,7 @@ p, label {
 
     .number-of-sites__count {
         padding: 0;
-        font-size: calc( 100vw / 4.25 );
+        font-size: calc( 100vw / 4 );
     }
 
     .form-section {
