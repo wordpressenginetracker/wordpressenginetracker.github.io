@@ -268,7 +268,7 @@ p, label {
         flex-direction: column-reverse;
         align-items: end;
         justify-content: space-between;
-        height: 87vh; /* Rough calculation of: viewport height, minus footer height, minus body top/bottom padding */
+        min-height: 87vh; /* Rough calculation of: viewport height, minus footer height, minus body top/bottom padding */
     }
 
     .number-of-sites__count {
@@ -280,8 +280,9 @@ p, label {
 @media (min-width: 1600px) {
     .number-of-sites {
         display: flex;
+        flex-direction: row;
         justify-content: flex-end;
-        align-items: center;
+        align-items: end;
         gap: 5rem;
         margin-top: auto;
         margin-bottom: 3vw;
