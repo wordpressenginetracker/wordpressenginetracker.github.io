@@ -268,12 +268,18 @@ p, label {
         flex-direction: column-reverse;
         align-items: end;
         justify-content: space-between;
-        min-height: 87vh; /* Rough calculation of: viewport height, minus footer height, minus body top/bottom padding */
+        min-height: calc( 100vw / 1.35 )/* Rough calculation of: viewport height, minus footer height, minus body top/bottom padding */
     }
 
     .number-of-sites__count {
         text-align: right;
         letter-spacing: -0.4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .number-of-sites {
+        min-height: calc( 100vw / 1.7 );/* Rough calculation of: viewport height, minus footer height, minus body top/bottom padding */
     }
 }
 
@@ -287,6 +293,7 @@ p, label {
         margin-top: auto;
         margin-bottom: 3vw;
         padding-right: var(--body-padding);
+        min-height: unset;
     }
 
     .number-of-sites__count {
