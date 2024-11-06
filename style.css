@@ -239,6 +239,11 @@ p, label {
         column-gap: 5rem;
     }
 
+    .header__logo {
+        position: absolute;
+    }
+
+
     .form-section {
         position: absolute;
         top: var(--body-padding);
@@ -259,7 +264,11 @@ p, label {
     }
 
     .number-of-sites {
-        margin-top: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: end;
+        justify-content: space-between;
+        height: 87vh; /* Rough calculation of: viewport height, minus footer height, minus body top/bottom padding */
     }
 
     .number-of-sites__count {
