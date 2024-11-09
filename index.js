@@ -252,7 +252,7 @@ function initChart() {
       const entries = Object.entries(stats);
 
       // Create bars
-      entries.forEach(([date, value], index) => {
+      entries.reverse().forEach(([date, value], index) => {
         const height = (value / maxValue) * 100;
         const bar = document.createElement("div");
         bar.className = "bar";
